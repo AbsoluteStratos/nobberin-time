@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+   <link rel="icon" type="image/png" href="nobbers.png">
+  <title>Nobberin Time?</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: grid;
+      place-items: center;
+      background: #e6a6b2; /* peachy pink */
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+    }
+    #question {
+      font-size: 2.5rem;
+      color: rgb(255, 210, 218);
+      text-shadow:
+        -1px -1px 0 white,
+         1px -1px 0 white,
+        -1px  1px 0 white,
+         1px  1px 0 white;
+      cursor: pointer;
+      transition: text-shadow 0.2s ease-in-out, transform 0.1s;
+    }
+    #question:hover {
+      text-shadow:
+        0 0 8px white,
+        -1px -1px 0 white,
+         1px -1px 0 white,
+        -1px  1px 0 white,
+         1px  1px 0 white;
+    }
+    .footer {
+      position: absolute;
+      bottom: 10px;
+      right: 12px;
+      font-size: 0.75rem;
+      color: rgba(255, 255, 255, 0.849); /* light pink */
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+    <div id="question">is it nobberin time?</div>
+    <div class="footer">built by stratos in 2 minutes</div>
+    <script>
+        const q = document.getElementById('question');
+        q.addEventListener('click', () => {
+        q.textContent = 'yes';
+        });
+    </script>
+</body>
+</html>

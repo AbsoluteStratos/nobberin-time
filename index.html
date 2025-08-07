@@ -33,6 +33,12 @@
         -1px  1px 0 white,
          1px  1px 0 white;
     }
+    .no-select {
+      -webkit-user-select: none; /* Safari */
+      -moz-user-select: none;    /* Firefox */
+      -ms-user-select: none;     /* IE 10+ */
+      user-select: none;         /* Standard */
+    }
     .footer {
       position: absolute;
       bottom: 10px;
@@ -44,7 +50,7 @@
   </style>
 </head>
 <body>
-    <div id="question">is it nobberin time?</div>
+    <div id="question" class="no-select">is it nobberin time?</div>
     <div class="footer">built by stratos in 2 minutes</div>
     <script>
         const q = document.getElementById('question');
